@@ -1,6 +1,6 @@
 package com.smb.repository;
 
-import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -8,6 +8,6 @@ import com.smb.entity.LoginUser;
 
 public interface LoginUserRepository extends JpaRepository<LoginUser, String> {
 	
-	public List<LoginUser> findByUserName(String userName);
+	public Optional<LoginUser> findByUserName(String userName);
 
 }

@@ -1,11 +1,13 @@
 package com.smb.service;
 
-import java.util.List;
+import java.util.Optional;
 
 import com.smb.entity.LoginUser;
 
 public interface LoginUserService {
 
-	List<LoginUser> getUser(String userName);
+	Optional<LoginUser> getUser(String userName);
+
+	LoginUser addUser(LoginUser user);
 	
 }

@@ -6,13 +6,15 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Data;
 
 @Entity
+@Data
 @Table(name="SMB_USER_PROFILE")
 public class LoginUser {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column
 	private Long id;
 	
@@ -28,7 +30,7 @@ public class LoginUser {
 	@Column(name = "USER_TYPE")
 	private String userRole;
 
-	@Column(name = "CUS_ID")
+	@Column(name = "USER_PASSWORD_DUPLICATE")
 	private String passwordDuplicate;
 
 	public Long getId() {
